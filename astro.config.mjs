@@ -6,6 +6,7 @@ import tailwindcss from "@tailwindcss/vite";
 export default defineConfig({
   site: 'https://carlos.garciafaria.es',
   vite: {
-    plugins: [tailwindcss()],
+    // @ts-expect-error
+    plugins: [tailwindcss()], 
   },
 });
