@@ -41,8 +41,7 @@ h2,
 h3,
 h4,
 h5,
-h6 {
-  margin: 0 0 0.5rem 0;
+h6 {  
   color: rgb(var(--black));
   line-height: 1.2;
 }
@@ -66,10 +65,17 @@ b {
   font-weight: 700;
 }
 a {
+  /* https: //www.dannyguo.com/blog/animated-multiline-link-underlines-with-css */
   color: var(--accent);
+  text-decoration: none;
+  background-image: linear-gradient(currentColor, currentColor);
+  background-position: 0% 100%;
+  background-repeat: no-repeat;
+  background-size: 0% 2px;
+  transition: background-size .3s;
 }
 a:hover {
-  color: var(--accent);
+  background-size: 100% 2px;
 }
 p {
   margin-bottom: 1em;
